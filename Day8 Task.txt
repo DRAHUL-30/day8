@@ -1,0 +1,107 @@
+1) Movie Class
+
+class Movie{
+    constructor(title,studio,rating="S1"){
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    }
+    getPG(array){
+        let arr=[];
+        for(var x of array){
+            if(x[2]=="S1"){
+                arr.push(x);
+            }
+        }
+        return arr;
+    }
+}
+let obj=new Movie("valentine"," dump Productions","S1­10")
+console.log(obj.getS1([["hero","sk","S1"],["don","sk","uh"],["Kaala","vijay","S1"]]))
+
+____________________________________________________________________________________________________
+2) Circle Class
+
+class Circle{
+    constructor(radius,color){
+        this.radius=radius;
+        this.color=color;
+            }
+    getRadius(){
+        console.log(this.radius);
+    }
+    setcolur(str){
+        this.color=str;
+    }
+    getColor(){
+        console.log(this.color);
+    }
+    getArea(){
+        console.log(Math.PI*(this.radius*this.radius));
+    }
+    getCircumference(){
+        console.log(2*Math.PI*this.radius);
+    }
+}
+
+var obj=new Circle(7,"red");
+obj.getRadius();
+obj.getColor();
+obj.setcolur("green");
+obj.getColor();
+obj.getArea();
+obj.getCircumference();
+
+______________________________________________________________________________________________________________
+3) Person Class
+
+class Person{
+    constructor(name,age,DOB,place,phoneNumber,gender,email,occupation){
+        this.name=name;
+        this.age=age;
+        this.DOB=DOB;
+        this.place=place;
+        this.phoneNumber=phoneNumber;
+        this.gender=gender;
+        this.email=email;
+    }
+    setDetail(str){
+        this.occupation=str;
+    }
+    getDetails(){
+        console.log(this);
+    }
+}
+var obj=new Person("rahul",22,"30-07-1998","salem","male","rh12@gmail.com","6712367123")
+obj.getDetails();
+obj.setDetail("IT");
+obj.getDetails();
+
+____________________________________________________________________________________________________________________________________
+4) Uber Price Class
+
+class Fare{
+    constructor(name,distance,carType){
+        this.name=name;
+        this.distance=distance;
+        this.carType=carType;
+    }
+    getFare(){
+        if(this.carType=="Sedan"){
+            console.log(this.name + "'s fare is Rs.",this.distance*70);
+        }
+        else if(this.carType=="SUV"){
+            console.log(this.name + "'s fare is Rs.",this.distance*100);
+        }
+        else if(this.carType=="Micro"){
+            console.log(this.name + "'s fare is Rs.",this.distance*50);
+        }
+        else if(this.carType=="Mini"){
+            console.log(this.name + "'s fare is Rs.",this.distance*30);
+        }
+    }
+}
+let customer1=new Fare("rahul",10,"Mini");
+customer1.getFare()
+let customer2=new Fare("dravid",100,"Micro");
+customer2.getFare()
